@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 
 namespace Zork
 {
@@ -9,19 +10,10 @@ namespace Zork
             Console.WriteLine("Welcome to Zork!");
 
             string inputString = Console.ReadLine();
-            inputString = inputString.ToUpper();
-            if (inputString == "QUIT")
-            {
-                Console.WriteLine("Thank you for playing!");
-            }
-            else if (inputString == "LOOK")
-            {
-                Console.WriteLine("This is an open field west of a white house, with a boarded front door. \nA rubber mat saying 'Welcome ro Zork!' lies by the door.");
-            }
-            else
-            {
-                Console.WriteLine("Unrecognized command.");
-            }
+            Commands command = ToCommand(inputString.Trim());
+            Console.WriteLine(command);
         }
+
+        private static Commands ToCommand(string commandString) => Enum.TryParse(commandString, true, out Commands result) ? result : Commands.UNKNOWN;  
     }
 }
