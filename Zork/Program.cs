@@ -2,9 +2,9 @@
 
 namespace Zork
 {
-    internal class Program
+    class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Zork!");
 
@@ -46,7 +46,7 @@ namespace Zork
                         break;
                 }
 
-                Console.WriteLine(outputString);
+                Console.Write(outputString);
             }
         }
 
