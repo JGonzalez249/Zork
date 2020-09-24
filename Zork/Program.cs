@@ -93,7 +93,7 @@ namespace Zork
         
         };
 
-        private static (int Row, int Column) Location = (1, 1); //Player Spawns West of House
+        private static (int Row, int Column) Location = (1, 1); //Player Spawns West of House on array
 
     }
 
