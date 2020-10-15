@@ -9,4 +9,10 @@
     <None Remove="Program.cs~RF288c851.TMP" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Rooms.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -1,10 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace Zork
 {
     class Program
     {
+
+        private enum CommandLineArguments
+        {
+            RoomsFilename = 0
+        }
         public static Room CurrentRoom 
         {
 
@@ -13,13 +20,14 @@ namespace Zork
                 return Rooms[Location.Row, Location.Column]; //Gives current location of the player
             }
         }
-
-       
-
+     
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Zork!");
-            InitializeRoomDescriptions();
+
+            const string defaultRoomsFilename = "Rooms.txt";
+            string roomsFilename = (args.Length > 0 ? args[(int)CommandLineArguments.RoomsFilename] : defaultRoomsFilename);
+            InitializeRoomDescriptions(roomsFilename);
 
             Room previousRoom = null;
             Commands command = Commands.UNKNOWN;
@@ -61,10 +69,8 @@ namespace Zork
                         Console.WriteLine("Unknown command.");
                         break;
                 }
-
             }
         }
-
 
         private static bool Move(Commands command)
         {
@@ -109,25 +115,37 @@ namespace Zork
         
         };
 
-        private static void InitializeRoomDescriptions()
+        private static readonly Dictionary<string, Room> RoomMap;
+
+        static Program()
         {
-            var roomMap = new Dictionary<string, Room>();
+            RoomMap = new Dictionary<string, Room>();
             foreach (Room room in Rooms)
             {
-                roomMap[room.Name] = room;
+                RoomMap[room.Name] = room;
             }
+        }
 
-            roomMap["Rocky Trail"].Description = "You are on a rock-strewn trail.";
-            roomMap["South of House"].Description = "You are facing the south side of a white house. There is no door here, and all windows are barred.";
-            roomMap["Canyon View"].Description = "You are at the top of the Great Canyon on its south wall.";   
+        private static void InitializeRoomDescriptions(string roomsFilename)
+        {
+            const string fieldDelimiter = "##";
+            const int expectedFieldCount = 2;
+            var roomQuery = from line in File.ReadLines(roomsFilename)
+                            let fields = line.Split(fieldDelimiter)
+                            where fields.Length == expectedFieldCount
+                            select (Name: fields[(int)Fields.Name],
+                                    Descriptions: fields[(int)Fields.Description]);
+            
+            foreach (var (Name, Description) in roomQuery)
+            {               
+                 RoomMap[Name].Description = Description;
+            }
+        }
 
-            roomMap["Forest"].Description = "This is a forest, with trees in all directions around you.";
-            roomMap["West of House"].Description = "This is an open field west of a white house, with a boarded front door.";                                         
-            roomMap["Behind House"].Description = "You are behind the white house. In one corner of the house there is a small window which is slightly ajar.";
-
-            roomMap["Dense Woods"].Description = "This is a dimly lit forest, with large trees all around. To the east, there appears to be sunlight.";
-            roomMap["North of House"].Description = "You are facing the north side of a white house. There is no door here, and all windows are barred.";
-            roomMap["Clearing"].Description = "You are in a clearing, with a forest surrounding you on the west and south.";
+        private enum Fields
+        {
+            Name = 0,
+            Description
         }
 
         private static readonly List<Commands> Directions = new List<Commands>
@@ -142,6 +160,4 @@ namespace Zork
         private static (int Row, int Column) Location = (1, 1); //Player Spawns West of House on array
 
     }
-
-
 }
