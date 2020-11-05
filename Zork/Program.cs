@@ -2,16 +2,14 @@
 
 namespace Zork
 {
-    internal class Program
+    class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
             const string defaultGameFilename = "Zork.json";
-            string gameFilename = (args.Length > 0 ? args[(int)CommandLineArguments.GameFilename] : defaultGameFilename);
+            string gameFilename = args.Length > 0 ? args[(int)CommandLineArguments.GameFilename] : defaultGameFilename;
 
-            Game game = Game.Load(gameFilename);
-            Console.WriteLine("Welcome to Zork!");
-            game.Run();
+            Game.Start(gameFilename);
             Console.WriteLine("Thank you for playing!");
         }
 
