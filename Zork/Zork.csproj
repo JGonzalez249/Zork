@@ -8,13 +8,6 @@
 
   <ItemGroup>
     <None Remove="Program.cs~RF288c851.TMP" />
-    <None Remove="Scripts\Hello.csx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Scripts\Hello.csx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Scripts\Hello.csx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Zork.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

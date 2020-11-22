@@ -11,10 +11,10 @@ namespace Zork
 {
     public class Game
     {
-        public World World { get; set; }
-
         [JsonIgnore]
         public static Game Instance { get; private set; }
+
+        public World World { get; set; }
 
         [JsonIgnore]
         public Player Player { get; private set; }
@@ -39,6 +39,7 @@ namespace Zork
             {
                 throw new FileNotFoundException("Expected file.", gameFilename);
             }
+
             while (Instance == null || Instance.mIsRestarting)
             {
                 Instance = Load(gameFilename);
@@ -49,7 +50,7 @@ namespace Zork
             }
         }
 
-        public void Run()
+        private void Run()
         {
             mIsRunning = true;
             Room previousRoom = null;
@@ -77,7 +78,7 @@ namespace Zork
         public void Restart()
         {
             mIsRunning = false;
-            mIsRestarting = false;
+            mIsRestarting = true;
             Console.Clear();
         }
 
@@ -93,14 +94,14 @@ namespace Zork
 
         private void LoadCommands()
         {
-            var commandMethods = from type in Assembly.GetExecutingAssembly().GetTypes()
+            var commandMethods = (from type in Assembly.GetExecutingAssembly().GetTypes()
                                   from method in type.GetMethods()
                                   let attribute = method.GetCustomAttribute<CommandAttribute>()
                                   where type.IsClass && type.GetCustomAttribute<CommandClassAttribute>() != null
                                   where attribute != null
                                   select new Command(attribute.CommandName, attribute.Verbs,
                                   (Action<Game, CommandContext>)Delegate.CreateDelegate(typeof(Action<Game, CommandContext>),
-                                  method));
+                                  method)));
 
             CommandManager.AddCommands(commandMethods);
         }
@@ -123,7 +124,7 @@ namespace Zork
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error compiling script: {file} Error {ex.Message}");
+                    Console.WriteLine($"Error compiling script: {file}  Error: {ex.Message}");
                 }
             }
         }
