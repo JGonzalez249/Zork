@@ -26,15 +26,9 @@
       ]
     },
     {
-      "Name": "Test",
-      "Health": 100,
-      "Score": 500,
-      "Inventory": []
-    },
-    {
-      "Name": "Another Test",
-      "Health": 0,
-      "Score": 0,
+      "Name": "Seras",
+      "Health": 150,
+      "Score": 50,
       "Inventory": []
     }
   ],

@@ -69,11 +69,11 @@
         }
       }
     },
-    "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork.Builder.WinForms\\InventoryManager.WinForms.csproj": {
+    "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork.Builder.WinForms\\Zork.Builder.WinForms.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork.Builder.WinForms\\InventoryManager.WinForms.csproj",
-        "projectName": "InventoryManager.WinForms",
-        "projectPath": "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork.Builder.WinForms\\InventoryManager.WinForms.csproj",
+        "projectUniqueName": "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork.Builder.WinForms\\Zork.Builder.WinForms.csproj",
+        "projectName": "Zork.Builder.WinForms",
+        "projectPath": "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork.Builder.WinForms\\Zork.Builder.WinForms.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
@@ -112,8 +112,11 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork.Builder.WinForms\\InventoryManager.WinForms.csproj": {
-                "projectPath": "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork.Builder.WinForms\\InventoryManager.WinForms.csproj"
+              "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\InventoryManager.Data\\InventoryManager.Data.csproj": {
+                "projectPath": "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\InventoryManager.Data\\InventoryManager.Data.csproj"
+              },
+              "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork.Builder.WinForms\\Zork.Builder.WinForms.csproj": {
+                "projectPath": "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork.Builder.WinForms\\Zork.Builder.WinForms.csproj"
               }
             }
           }
@@ -141,6 +144,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
+            },
+            "PropertyChanged.Fody": {
+              "target": "Package",
+              "version": "[3.3.1, )"
             }
           },
           "imports": [
@@ -204,6 +211,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
+            },
+            "PropertyChanged.Fody": {
+              "target": "Package",
+              "version": "[3.3.1, )"
             }
           },
           "imports": [

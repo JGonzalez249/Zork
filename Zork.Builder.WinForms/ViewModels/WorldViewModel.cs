@@ -16,6 +16,10 @@ namespace InventoryManager.WinForms.ViewModels
         
         public BindingList<Item> Items { get; set; }
 
+
+        // Stopped right here, couldn't figure out to get a binding list from a different Solution without making a new Room class for this Solution
+       // public BindingList<Room> Rooms { get; set; }
+
         public World World 
         { 
             set

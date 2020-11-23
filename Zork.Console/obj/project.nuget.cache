@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4pyNrFBYLdfYZl+1ig3FI03fTrO7x1qf38mXbx1i5IakVxtS1eDQitXfLRnwmMyIXGAnKvMdmzHGDPbFaKkPXQ==",
+  "dgSpecHash": "uyA3mE94/VXtpio2JELHnrpAICoha0gBZJZqiFpOZlb1Kktf+kX5ZiZcVQLYm9JpPZgzdSv2xxinb79/28r/5Q==",
   "success": true,
   "projectFilePath": "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork.Console\\Zork.Console.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\techf\\.nuget\\packages\\fody\\6.0.0\\fody.6.0.0.nupkg.sha512",
+    "C:\\Users\\techf\\.nuget\\packages\\fody\\6.3.0\\fody.6.3.0.nupkg.sha512",
     "C:\\Users\\techf\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.0.0\\microsoft.codeanalysis.analyzers.3.0.0.nupkg.sha512",
     "C:\\Users\\techf\\.nuget\\packages\\microsoft.codeanalysis.common\\3.8.0\\microsoft.codeanalysis.common.3.8.0.nupkg.sha512",
     "C:\\Users\\techf\\.nuget\\packages\\microsoft.codeanalysis.csharp\\3.8.0\\microsoft.codeanalysis.csharp.3.8.0.nupkg.sha512",
@@ -14,7 +14,7 @@
     "C:\\Users\\techf\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\techf\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\techf\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\techf\\.nuget\\packages\\propertychanged.fody\\3.1.3\\propertychanged.fody.3.1.3.nupkg.sha512",
+    "C:\\Users\\techf\\.nuget\\packages\\propertychanged.fody\\3.3.1\\propertychanged.fody.3.3.1.nupkg.sha512",
     "C:\\Users\\techf\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\techf\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\techf\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",

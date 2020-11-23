@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zork.Common", "Zork.Common\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zork.Console", "Zork.Console\Zork.Console.csproj", "{D5AD073E-C0EB-4E3E-B6F0-47464213A792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManager.WinForms", "Zork.Builder.WinForms\InventoryManager.WinForms.csproj", "{BDFFEC5E-545D-409C-9F81-6C618408B8AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zork.Builder.WinForms", "Zork.Builder.WinForms\Zork.Builder.WinForms.csproj", "{BDFFEC5E-545D-409C-9F81-6C618408B8AD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManager.Data", "InventoryManager.Data\InventoryManager.Data.csproj", "{CC2F3305-1274-4F5E-BEAD-BC3D14D54904}"
 EndProject

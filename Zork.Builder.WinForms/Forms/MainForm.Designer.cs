@@ -61,6 +61,8 @@
             this.deleteItemButton = new System.Windows.Forms.Button();
             this.addItemButton = new System.Windows.Forms.Button();
             this.itemsListBox = new System.Windows.Forms.ListBox();
+            this.mapTabPage = new System.Windows.Forms.TabPage();
+            this.mapAreaListBox = new System.Windows.Forms.ListBox();
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newWorldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,6 +74,10 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.welcomeGroupBox = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.deleteWelcomeMessageButton = new System.Windows.Forms.Button();
+            this.newWelcomeMessageButton = new System.Windows.Forms.Button();
             toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.worldViewModelBindingSource)).BeginInit();
@@ -81,7 +87,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).BeginInit();
             this.itemsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
+            this.mapTabPage.SuspendLayout();
             this.mainMenuStrip.SuspendLayout();
+            this.welcomeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripMenuItem1
@@ -106,8 +114,9 @@
             // 
             this.mainTabControl.Controls.Add(this.playersTabPage);
             this.mainTabControl.Controls.Add(this.itemsTabPage);
+            this.mainTabControl.Controls.Add(this.mapTabPage);
             this.mainTabControl.Location = new System.Drawing.Point(20, 33);
-            this.mainTabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mainTabControl.Margin = new System.Windows.Forms.Padding(4);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
             this.mainTabControl.Size = new System.Drawing.Size(828, 681);
@@ -131,9 +140,9 @@
             this.playersTabPage.Controls.Add(this.addPlayerButton);
             this.playersTabPage.Controls.Add(this.playersListBox);
             this.playersTabPage.Location = new System.Drawing.Point(4, 25);
-            this.playersTabPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.playersTabPage.Margin = new System.Windows.Forms.Padding(4);
             this.playersTabPage.Name = "playersTabPage";
-            this.playersTabPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.playersTabPage.Padding = new System.Windows.Forms.Padding(4);
             this.playersTabPage.Size = new System.Drawing.Size(820, 652);
             this.playersTabPage.TabIndex = 0;
             this.playersTabPage.Text = "Players";
@@ -166,7 +175,7 @@
             this.playerInventoryListBox.FormattingEnabled = true;
             this.playerInventoryListBox.ItemHeight = 16;
             this.playerInventoryListBox.Location = new System.Drawing.Point(263, 178);
-            this.playerInventoryListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.playerInventoryListBox.Margin = new System.Windows.Forms.Padding(4);
             this.playerInventoryListBox.Name = "playerInventoryListBox";
             this.playerInventoryListBox.Size = new System.Drawing.Size(213, 404);
             this.playerInventoryListBox.TabIndex = 10;
@@ -188,7 +197,7 @@
             this.availableItemsListBox.FormattingEnabled = true;
             this.availableItemsListBox.ItemHeight = 16;
             this.availableItemsListBox.Location = new System.Drawing.Point(593, 175);
-            this.availableItemsListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.availableItemsListBox.Margin = new System.Windows.Forms.Padding(4);
             this.availableItemsListBox.Name = "availableItemsListBox";
             this.availableItemsListBox.Size = new System.Drawing.Size(213, 404);
             this.availableItemsListBox.TabIndex = 14;
@@ -196,7 +205,7 @@
             // removeItemFromInventoryButton
             // 
             this.removeItemFromInventoryButton.Location = new System.Drawing.Point(485, 326);
-            this.removeItemFromInventoryButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.removeItemFromInventoryButton.Margin = new System.Windows.Forms.Padding(4);
             this.removeItemFromInventoryButton.Name = "removeItemFromInventoryButton";
             this.removeItemFromInventoryButton.Size = new System.Drawing.Size(100, 28);
             this.removeItemFromInventoryButton.TabIndex = 12;
@@ -207,7 +216,7 @@
             // addItemToInventoryButton
             // 
             this.addItemToInventoryButton.Location = new System.Drawing.Point(485, 290);
-            this.addItemToInventoryButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addItemToInventoryButton.Margin = new System.Windows.Forms.Padding(4);
             this.addItemToInventoryButton.Name = "addItemToInventoryButton";
             this.addItemToInventoryButton.Size = new System.Drawing.Size(100, 28);
             this.addItemToInventoryButton.TabIndex = 11;
@@ -219,7 +228,7 @@
             // 
             this.playerScoreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Score", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerScoreTextBox.Location = new System.Drawing.Point(263, 127);
-            this.playerScoreTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.playerScoreTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.playerScoreTextBox.Name = "playerScoreTextBox";
             this.playerScoreTextBox.Size = new System.Drawing.Size(116, 22);
             this.playerScoreTextBox.TabIndex = 8;
@@ -238,7 +247,7 @@
             // 
             this.playerHealthTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Health", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerHealthTextBox.Location = new System.Drawing.Point(263, 78);
-            this.playerHealthTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.playerHealthTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.playerHealthTextBox.Name = "playerHealthTextBox";
             this.playerHealthTextBox.Size = new System.Drawing.Size(116, 22);
             this.playerHealthTextBox.TabIndex = 6;
@@ -257,7 +266,7 @@
             // 
             this.playerNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.playerNameTextBox.Location = new System.Drawing.Point(263, 28);
-            this.playerNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.playerNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.playerNameTextBox.Name = "playerNameTextBox";
             this.playerNameTextBox.Size = new System.Drawing.Size(356, 22);
             this.playerNameTextBox.TabIndex = 4;
@@ -275,7 +284,7 @@
             // deletePlayerButton
             // 
             this.deletePlayerButton.Location = new System.Drawing.Point(119, 612);
-            this.deletePlayerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deletePlayerButton.Margin = new System.Windows.Forms.Padding(4);
             this.deletePlayerButton.Name = "deletePlayerButton";
             this.deletePlayerButton.Size = new System.Drawing.Size(100, 28);
             this.deletePlayerButton.TabIndex = 2;
@@ -286,7 +295,7 @@
             // addPlayerButton
             // 
             this.addPlayerButton.Location = new System.Drawing.Point(11, 612);
-            this.addPlayerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addPlayerButton.Margin = new System.Windows.Forms.Padding(4);
             this.addPlayerButton.Name = "addPlayerButton";
             this.addPlayerButton.Size = new System.Drawing.Size(100, 28);
             this.addPlayerButton.TabIndex = 1;
@@ -301,7 +310,7 @@
             this.playersListBox.FormattingEnabled = true;
             this.playersListBox.ItemHeight = 16;
             this.playersListBox.Location = new System.Drawing.Point(8, 7);
-            this.playersListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.playersListBox.Margin = new System.Windows.Forms.Padding(4);
             this.playersListBox.Name = "playersListBox";
             this.playersListBox.Size = new System.Drawing.Size(241, 596);
             this.playersListBox.TabIndex = 0;
@@ -318,9 +327,9 @@
             this.itemsTabPage.Controls.Add(this.addItemButton);
             this.itemsTabPage.Controls.Add(this.itemsListBox);
             this.itemsTabPage.Location = new System.Drawing.Point(4, 25);
-            this.itemsTabPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.itemsTabPage.Margin = new System.Windows.Forms.Padding(4);
             this.itemsTabPage.Name = "itemsTabPage";
-            this.itemsTabPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.itemsTabPage.Padding = new System.Windows.Forms.Padding(4);
             this.itemsTabPage.Size = new System.Drawing.Size(820, 652);
             this.itemsTabPage.TabIndex = 1;
             this.itemsTabPage.Text = "Items";
@@ -330,7 +339,7 @@
             // 
             this.itemWeightTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "Weight", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.itemWeightTextBox.Location = new System.Drawing.Point(228, 78);
-            this.itemWeightTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.itemWeightTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.itemWeightTextBox.Name = "itemWeightTextBox";
             this.itemWeightTextBox.Size = new System.Drawing.Size(116, 22);
             this.itemWeightTextBox.TabIndex = 6;
@@ -354,7 +363,7 @@
             // 
             this.itemNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.itemNameTextBox.Location = new System.Drawing.Point(228, 28);
-            this.itemNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.itemNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.itemNameTextBox.Name = "itemNameTextBox";
             this.itemNameTextBox.Size = new System.Drawing.Size(356, 22);
             this.itemNameTextBox.TabIndex = 4;
@@ -372,7 +381,7 @@
             // deleteItemButton
             // 
             this.deleteItemButton.Location = new System.Drawing.Point(116, 612);
-            this.deleteItemButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deleteItemButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteItemButton.Name = "deleteItemButton";
             this.deleteItemButton.Size = new System.Drawing.Size(100, 28);
             this.deleteItemButton.TabIndex = 2;
@@ -383,7 +392,7 @@
             // addItemButton
             // 
             this.addItemButton.Location = new System.Drawing.Point(8, 612);
-            this.addItemButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addItemButton.Margin = new System.Windows.Forms.Padding(4);
             this.addItemButton.Name = "addItemButton";
             this.addItemButton.Size = new System.Drawing.Size(100, 28);
             this.addItemButton.TabIndex = 1;
@@ -398,12 +407,38 @@
             this.itemsListBox.FormattingEnabled = true;
             this.itemsListBox.ItemHeight = 16;
             this.itemsListBox.Location = new System.Drawing.Point(8, 7);
-            this.itemsListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.itemsListBox.Margin = new System.Windows.Forms.Padding(4);
             this.itemsListBox.Name = "itemsListBox";
             this.itemsListBox.Size = new System.Drawing.Size(207, 596);
             this.itemsListBox.TabIndex = 0;
             this.itemsListBox.ValueMember = "Name";
             this.itemsListBox.SelectedIndexChanged += new System.EventHandler(this.ItemsListBox_SelectedIndexChanged);
+            // 
+            // mapTabPage
+            // 
+            this.mapTabPage.Controls.Add(this.deleteWelcomeMessageButton);
+            this.mapTabPage.Controls.Add(this.newWelcomeMessageButton);
+            this.mapTabPage.Controls.Add(this.welcomeGroupBox);
+            this.mapTabPage.Controls.Add(this.mapAreaListBox);
+            this.mapTabPage.Location = new System.Drawing.Point(4, 25);
+            this.mapTabPage.Name = "mapTabPage";
+            this.mapTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.mapTabPage.Size = new System.Drawing.Size(820, 652);
+            this.mapTabPage.TabIndex = 2;
+            this.mapTabPage.Text = "Map";
+            this.mapTabPage.UseVisualStyleBackColor = true;
+            // 
+            // mapAreaListBox
+            // 
+            this.mapAreaListBox.DisplayMember = "Health";
+            this.mapAreaListBox.FormattingEnabled = true;
+            this.mapAreaListBox.ItemHeight = 16;
+            this.mapAreaListBox.Location = new System.Drawing.Point(7, 17);
+            this.mapAreaListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.mapAreaListBox.Name = "mapAreaListBox";
+            this.mapAreaListBox.Size = new System.Drawing.Size(241, 628);
+            this.mapAreaListBox.TabIndex = 1;
+            this.mapAreaListBox.ValueMember = "Health";
             // 
             // mainMenuStrip
             // 
@@ -413,7 +448,7 @@
             this.helpToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
-            this.mainMenuStrip.Size = new System.Drawing.Size(851, 28);
+            this.mainMenuStrip.Size = new System.Drawing.Size(865, 28);
             this.mainMenuStrip.TabIndex = 0;
             this.mainMenuStrip.Text = "menuStrip1";
             // 
@@ -489,7 +524,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -498,15 +533,54 @@
             this.saveFileDialog.Filter = "World files (*.json)|*.json";
             this.saveFileDialog.Title = "Save world file";
             // 
+            // welcomeGroupBox
+            // 
+            this.welcomeGroupBox.Controls.Add(this.textBox1);
+            this.welcomeGroupBox.Location = new System.Drawing.Point(255, 545);
+            this.welcomeGroupBox.Name = "welcomeGroupBox";
+            this.welcomeGroupBox.Size = new System.Drawing.Size(359, 56);
+            this.welcomeGroupBox.TabIndex = 2;
+            this.welcomeGroupBox.TabStop = false;
+            this.welcomeGroupBox.Text = "&Welcome Message:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 21);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(347, 22);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "\"Welcome to Zork!\"";
+            // 
+            // deleteWelcomeMessageButton
+            // 
+            this.deleteWelcomeMessageButton.Location = new System.Drawing.Point(514, 608);
+            this.deleteWelcomeMessageButton.Margin = new System.Windows.Forms.Padding(4);
+            this.deleteWelcomeMessageButton.Name = "deleteWelcomeMessageButton";
+            this.deleteWelcomeMessageButton.Size = new System.Drawing.Size(100, 28);
+            this.deleteWelcomeMessageButton.TabIndex = 4;
+            this.deleteWelcomeMessageButton.Text = "&Delete";
+            this.deleteWelcomeMessageButton.UseVisualStyleBackColor = true;
+            // 
+            // newWelcomeMessageButton
+            // 
+            this.newWelcomeMessageButton.Location = new System.Drawing.Point(406, 608);
+            this.newWelcomeMessageButton.Margin = new System.Windows.Forms.Padding(4);
+            this.newWelcomeMessageButton.Name = "newWelcomeMessageButton";
+            this.newWelcomeMessageButton.Size = new System.Drawing.Size(100, 28);
+            this.newWelcomeMessageButton.TabIndex = 3;
+            this.newWelcomeMessageButton.Text = "&New...";
+            this.newWelcomeMessageButton.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 726);
+            this.ClientSize = new System.Drawing.Size(865, 726);
             this.Controls.Add(this.mainMenuStrip);
             this.Controls.Add(this.mainTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Inventory Manager";
@@ -519,8 +593,11 @@
             this.itemsTabPage.ResumeLayout(false);
             this.itemsTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
+            this.mapTabPage.ResumeLayout(false);
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();
+            this.welcomeGroupBox.ResumeLayout(false);
+            this.welcomeGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -568,6 +645,12 @@
         private System.Windows.Forms.Label itemWeightLabel;
         private System.Windows.Forms.TextBox itemNameTextBox;
         private System.Windows.Forms.Label itemNameLabel;
+        private System.Windows.Forms.TabPage mapTabPage;
+        private System.Windows.Forms.ListBox mapAreaListBox;
+        private System.Windows.Forms.Button deleteWelcomeMessageButton;
+        private System.Windows.Forms.Button newWelcomeMessageButton;
+        private System.Windows.Forms.GroupBox welcomeGroupBox;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
