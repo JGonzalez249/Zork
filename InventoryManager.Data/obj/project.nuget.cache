@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "hpRpQSHa0indqPdr3jhN30WVnoN6ZmQyQFsoETia1xLSVyqRNNVJv7Q6T64d2ObFvnJOmzwvByXQ02GqjvQCAw==",
+  "success": true,
+  "projectFilePath": "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\InventoryManager.Data\\InventoryManager.Data.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\techf\\.nuget\\packages\\fody\\6.0.0\\fody.6.0.0.nupkg.sha512",
+    "C:\\Users\\techf\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\techf\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\techf\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\techf\\.nuget\\packages\\propertychanged.fody\\3.1.3\\propertychanged.fody.3.1.3.nupkg.sha512"
+  ],
+  "logs": []
+}

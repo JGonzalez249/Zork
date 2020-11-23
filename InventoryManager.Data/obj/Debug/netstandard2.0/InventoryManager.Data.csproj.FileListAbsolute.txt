@@ -1,0 +1,10 @@
+D:\School Work\UCF Fall 2020\Tools and Plugins\InventoryManager\InventoryManager.Data\bin\Debug\netstandard2.0\InventoryManager.Data.deps.json
+D:\School Work\UCF Fall 2020\Tools and Plugins\InventoryManager\InventoryManager.Data\bin\Debug\netstandard2.0\InventoryManager.Data.dll
+D:\School Work\UCF Fall 2020\Tools and Plugins\InventoryManager\InventoryManager.Data\bin\Debug\netstandard2.0\InventoryManager.Data.pdb
+D:\School Work\UCF Fall 2020\Tools and Plugins\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.csprojAssemblyReference.cache
+D:\School Work\UCF Fall 2020\Tools and Plugins\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.AssemblyInfoInputs.cache
+D:\School Work\UCF Fall 2020\Tools and Plugins\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.AssemblyInfo.cs
+D:\School Work\UCF Fall 2020\Tools and Plugins\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.csproj.CoreCompileInputs.cache
+D:\School Work\UCF Fall 2020\Tools and Plugins\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.csproj.Fody.CopyLocal.cache
+D:\School Work\UCF Fall 2020\Tools and Plugins\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.dll
+D:\School Work\UCF Fall 2020\Tools and Plugins\InventoryManager\InventoryManager.Data\obj\Debug\netstandard2.0\InventoryManager.Data.pdb
