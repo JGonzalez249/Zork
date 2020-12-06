@@ -10,13 +10,14 @@
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp.Scripting": "3.8.0",
           "Newtonsoft.Json": "12.0.3",
+          "PropertyChanged.Fody": "3.3.1",
           "Zork.Common": "1.0.0"
         },
         "runtime": {
           "Zork.Console.dll": {}
         }
       },
-      "Fody/6.0.0": {},
+      "Fody/6.3.0": {},
       "Microsoft.CodeAnalysis.Analyzers/3.0.0": {},
       "Microsoft.CodeAnalysis.Common/3.8.0": {
         "dependencies": {
@@ -265,14 +266,14 @@
           }
         }
       },
-      "PropertyChanged.Fody/3.1.3": {
+      "PropertyChanged.Fody/3.3.1": {
         "dependencies": {
-          "Fody": "6.0.0"
+          "Fody": "6.3.0"
         },
         "runtime": {
-          "lib/netstandard1.0/PropertyChanged.dll": {
-            "assemblyVersion": "3.1.3.0",
-            "fileVersion": "3.1.3.0"
+          "lib/netstandard2.0/PropertyChanged.dll": {
+            "assemblyVersion": "3.3.1.0",
+            "fileVersion": "3.3.1.0"
           }
         }
       },
@@ -514,13 +515,13 @@
       "InventoryManager.Data/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
-          "PropertyChanged.Fody": "3.1.3"
+          "PropertyChanged.Fody": "3.3.1"
         },
         "runtime": {
           "InventoryManager.Data.dll": {}
         }
       },
-      "InventoryManager.WinForms/1.0.0": {
+      "Zork.Builder.WinForms/1.0.0": {
         "dependencies": {
           "InventoryManager.Data": "1.0.0"
         },
@@ -530,9 +531,11 @@
       },
       "Zork.Common/1.0.0": {
         "dependencies": {
-          "InventoryManager.WinForms": "1.0.0",
+          "InventoryManager.Data": "1.0.0",
           "Microsoft.CodeAnalysis.CSharp.Scripting": "3.8.0",
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "12.0.3",
+          "PropertyChanged.Fody": "3.3.1",
+          "Zork.Builder.WinForms": "1.0.0"
         },
         "runtime": {
           "Zork.Common.dll": {}
@@ -546,12 +549,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Fody/6.0.0": {
+    "Fody/6.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rH9Q7GapghyLYESfeCUOqh0S70eLc3FAikIgEEyGeng3JJf1M7mt2BUxjz93o3ipDXLrKn1s69AIEolmnVn8xg==",
-      "path": "fody/6.0.0",
-      "hashPath": "fody.6.0.0.nupkg.sha512"
+      "sha512": "sha512-kBGlW/vBUvBSyCvFI3YICNl77gjUr0KMROlBTeBPN/+J3JMU57w1dpXPwjmU4ahdBTYLomzgxKLaJ3jVNuXuQg==",
+      "path": "fody/6.3.0",
+      "hashPath": "fody.6.3.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Analyzers/3.0.0": {
       "type": "package",
@@ -616,12 +619,12 @@
       "path": "newtonsoft.json/12.0.3",
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
-    "PropertyChanged.Fody/3.1.3": {
+    "PropertyChanged.Fody/3.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GaTTQdS8NCVMBrBGIu43XwyicIyD7iIp9zFLK57Q2kfba6BffMGt4bl0jwfkMysbdqUjP4oZcunvbQBauWieUQ==",
-      "path": "propertychanged.fody/3.1.3",
-      "hashPath": "propertychanged.fody.3.1.3.nupkg.sha512"
+      "sha512": "sha512-/K/X8wn2IZV7Zezb+WvieOalWopFJKEcB7BrPoDFCj74VexupWdtvqriCoifSyrX0E+XhTzk0cVQd26hQ7TODg==",
+      "path": "propertychanged.fody/3.3.1",
+      "hashPath": "propertychanged.fody.3.3.1.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -831,7 +834,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "InventoryManager.WinForms/1.0.0": {
+    "Zork.Builder.WinForms/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

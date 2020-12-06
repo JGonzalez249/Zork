@@ -16,7 +16,6 @@ D:\School Work\UCF Fall 2020\Tools and Plugins\Zork\Zork.Console\bin\Debug\netco
 D:\School Work\UCF Fall 2020\Tools and Plugins\Zork\Zork.Console\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Scripting.dll
 D:\School Work\UCF Fall 2020\Tools and Plugins\Zork\Zork.Console\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Scripting.dll
 D:\School Work\UCF Fall 2020\Tools and Plugins\Zork\Zork.Console\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-D:\School Work\UCF Fall 2020\Tools and Plugins\Zork\Zork.Console\bin\Debug\netcoreapp3.1\PropertyChanged.dll
 D:\School Work\UCF Fall 2020\Tools and Plugins\Zork\Zork.Console\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 D:\School Work\UCF Fall 2020\Tools and Plugins\Zork\Zork.Console\bin\Debug\netcoreapp3.1\System.Reflection.Metadata.dll
 D:\School Work\UCF Fall 2020\Tools and Plugins\Zork\Zork.Console\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
@@ -87,3 +86,4 @@ D:\School Work\UCF Fall 2020\Tools and Plugins\Zork\Zork.Console\obj\Debug\netco
 D:\School Work\UCF Fall 2020\Tools and Plugins\Zork\Zork.Console\obj\Debug\netcoreapp3.1\Zork.Console.dll
 D:\School Work\UCF Fall 2020\Tools and Plugins\Zork\Zork.Console\obj\Debug\netcoreapp3.1\Zork.Console.pdb
 D:\School Work\UCF Fall 2020\Tools and Plugins\Zork\Zork.Console\obj\Debug\netcoreapp3.1\Zork.Console.genruntimeconfig.cache
+D:\School Work\UCF Fall 2020\Tools and Plugins\Zork\Zork.Console\obj\Debug\netcoreapp3.1\Zork.Console.csproj.Fody.CopyLocal.cache
